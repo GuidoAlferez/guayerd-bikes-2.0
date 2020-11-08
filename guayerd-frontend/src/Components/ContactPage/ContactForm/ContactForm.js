@@ -27,7 +27,9 @@ export default class ContactForm extends React.Component
 
         let validateFields = (name , email , phone , subjetc , message )=>{   
             validateName(name);
-            this.setState({formChecked: true});
+
+            this.state.nameChecked && ( 
+                this.setState({formChecked: true}) )
         }
 
         let validateName = (element) => {
